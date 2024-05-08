@@ -8,6 +8,7 @@ document.addEventListener("keydown", function(event) {
         calcular1()
         calcular2()
         calcular3()
+        calcular4()
     }
 })
 
@@ -69,5 +70,23 @@ function calcular3() {
         document.getElementById('resultado3').classList.add('result')
     } else {
         document.getElementById("resultado3").innerText = "Por favor, insira valores válidos.";
+    }
+}
+
+function calcular4() {
+    var valor1 = parseFloat(document.getElementById('dado1').value)
+    var valor2 = parseFloat(document.getElementById('dado2').value)
+    var valor3 = parseFloat(document.getElementById('dado3').value)
+    if(!isNaN(valor1) && !isNaN(valor2) && !isNaN(valor3)) {
+        var resultado = ((valor1 - valor2) * 100) / valor3
+        var casasDecimais = resultado % 1 === 0 ? 0 : resultado.toString().split(".")[1].length;
+        if (casasDecimais > 2) {
+            resultado = resultado.toFixed(casasDecimais);
+        }
+        resultado = resultado.toString().replace(".", ",");
+        document.getElementById("resultado4").innerText = "Resultado: " + resultado + '%';
+        document.getElementById('resultado4').classList.add('result')
+    } else {
+        document.getElementById("resultado4").innerText = "Por favor, insira valores válidos.";
     }
 }
