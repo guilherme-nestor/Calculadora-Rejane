@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <title>Regra de 3</title>
+  </head>
+
+  <body>
+    
+    <div class="container">
+        <h2>Calculadora de Regra de Três Simples</h2>
+        <input type="text" id="valor1" placeholder="Valor 1"> -
+        <input type="text" id="valor2" placeholder="Valor 2">
+        <input type="text" id="valor3" placeholder="Valor 3">
+        <button onclick="calcular1()">Calcular</button>
+        <p id="resultado1"></p>
+    </div>
+
+    <div class="container">
+        <h2>Porcentagem(%) do elemento no produto</h2>
+        <p class="subtitulo">Qual a porcentagem do elemento no produto 'x'?</p>
+        <input type="text" id="elemento1" placeholder="Elemento(g)">g
+        <input type="text" id="elemento2" placeholder="Produto(g)">g
+        <button onclick="calcular2()">Calcular</button>
+        <p id="resultado2"></p>
+    </div>
+
+    <div class="container">
+        <h2>Quantidade(g) do elemento no produto</h2>
+        <p class="subtitulo">Saber a quantidade em gramas do elemento de um determinado produto</p>
+        <input type="text" id="element1" placeholder="Elemento(%)">%
+        <input type="text" id="element2" placeholder="Produto(g)">g
+        <button onclick="calcular3()">Calcular</button>
+        <p id="resultado3"></p>
+    </div>
+
+
+
+    <script src="assets/js/script.js"></script>
+
+  </body>
+
+</html>
